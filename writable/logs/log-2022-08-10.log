@@ -1,0 +1,55 @@
+ERROR - 2022-08-10 02:22:34 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: YES)
+CRITICAL - 2022-08-10 02:22:34 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+#0 D:\kamandakabase\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\kamandakabase\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 D:\kamandakabase\vendor\codeigniter4\framework\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\kamandakabase\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 D:\kamandakabase\app\Controllers\Home.php(11): CodeIgniter\BaseModel->findAll()
+#5 D:\kamandakabase\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Home->index()
+#6 D:\kamandakabase\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController()
+#7 D:\kamandakabase\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest()
+#8 D:\kamandakabase\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-08-10 02:23:47 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: YES)
+CRITICAL - 2022-08-10 02:23:47 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+#0 D:\kamandakabase\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\kamandakabase\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 D:\kamandakabase\vendor\codeigniter4\framework\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\kamandakabase\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 D:\kamandakabase\app\Controllers\Home.php(11): CodeIgniter\BaseModel->findAll()
+#5 D:\kamandakabase\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Home->index()
+#6 D:\kamandakabase\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController()
+#7 D:\kamandakabase\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest()
+#8 D:\kamandakabase\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-08-10 02:25:51 --> Table 'kamandaka.reviews' doesn't exist
+CRITICAL - 2022-08-10 02:25:51 --> Table 'kamandaka.reviews' doesn't exist
+#0 D:\kamandakabase\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query()
+#1 D:\kamandakabase\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 D:\kamandakabase\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 D:\kamandakabase\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#4 D:\kamandakabase\vendor\codeigniter4\framework\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\kamandakabase\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#6 D:\kamandakabase\app\Controllers\Home.php(13): CodeIgniter\BaseModel->findAll()
+#7 D:\kamandakabase\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Home->index()
+#8 D:\kamandakabase\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController()
+#9 D:\kamandakabase\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest()
+#10 D:\kamandakabase\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2022-08-10 11:20:51 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-08-10 11:20:51 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 D:\kamandakabase\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\kamandakabase\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#2 D:\kamandakabase\vendor\codeigniter4\framework\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 D:\kamandakabase\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#4 D:\kamandakabase\app\Controllers\Home.php(11): CodeIgniter\BaseModel->findAll()
+#5 D:\kamandakabase\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Home->index()
+#6 D:\kamandakabase\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController()
+#7 D:\kamandakabase\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest()
+#8 D:\kamandakabase\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

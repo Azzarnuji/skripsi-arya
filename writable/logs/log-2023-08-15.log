@@ -1,0 +1,13 @@
+ERROR - 2023-08-15 15:10:25 --> Error connecting to the database: Too many connections
+CRITICAL - 2023-08-15 15:10:25 --> Unable to connect to the database.
+Main connection [MySQLi]: Too many connections
+#0 /home/kame1982/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /home/kame1982/public_html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 /home/kame1982/public_html/vendor/codeigniter4/framework/system/Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 /home/kame1982/public_html/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 /home/kame1982/public_html/app/Controllers/Home.php(11): CodeIgniter\BaseModel->findAll()
+#5 /home/kame1982/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->index()
+#6 /home/kame1982/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /home/kame1982/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/kame1982/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

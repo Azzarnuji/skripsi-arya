@@ -1,0 +1,156 @@
+CRITICAL - 2022-05-21 15:46:33 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1803781/public_html/vendor/codeigniter4/framework/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1803781/public_html/index.php(28): require('/home/u1803781/...')
+#2 {main}
+CRITICAL - 2022-05-21 15:46:43 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1803781/public_html/vendor/codeigniter4/framework/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1803781/public_html/index.php(28): require('/home/u1803781/...')
+#2 {main}
+CRITICAL - 2022-05-21 15:46:53 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1803781/public_html/vendor/codeigniter4/framework/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1803781/public_html/index.php(28): require('/home/u1803781/...')
+#2 {main}
+CRITICAL - 2022-05-21 15:47:06 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1803781/public_html/vendor/codeigniter4/framework/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1803781/public_html/index.php(28): require('/home/u1803781/...')
+#2 {main}
+CRITICAL - 2022-05-21 15:47:13 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1803781/public_html/vendor/codeigniter4/framework/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1803781/public_html/index.php(28): require('/home/u1803781/...')
+#2 {main}
+CRITICAL - 2022-05-21 15:48:43 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 /home/u1803781/public_html/vendor/codeigniter4/framework/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 /home/u1803781/public_html/index.php(28): require('/home/u1803781/...')
+#2 {main}
+ERROR - 2022-05-21 10:52:23 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: YES)
+CRITICAL - 2022-05-21 10:52:23 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+#0 /home/u1803781/public_html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 /home/u1803781/public_html/app/Controllers/Home.php(11): CodeIgniter\BaseModel->findAll()
+#5 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->index()
+#6 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-05-21 13:00:04 --> Trying to access array offset on value of type null
+#0 /home/u1803781/public_html/app/Controllers/Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1803781/...', 27, Array)
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->rental('hi')
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-21 13:00:04 --> Trying to access array offset on value of type null
+#0 /home/u1803781/public_html/app/Controllers/Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1803781/...', 27, Array)
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->rental('hia')
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-21 13:00:05 --> Trying to access array offset on value of type null
+#0 /home/u1803781/public_html/app/Controllers/Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1803781/...', 27, Array)
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->rental('hiac')
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-21 13:00:10 --> Trying to access array offset on value of type null
+#0 /home/u1803781/public_html/app/Controllers/Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1803781/...', 27, Array)
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->rental('in')
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-21 13:00:10 --> Trying to access array offset on value of type null
+#0 /home/u1803781/public_html/app/Controllers/Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1803781/...', 27, Array)
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->rental('ino')
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-21 13:00:10 --> Trying to access array offset on value of type null
+#0 /home/u1803781/public_html/app/Controllers/Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1803781/...', 27, Array)
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->rental('inov')
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-21 13:00:11 --> Trying to access array offset on value of type null
+#0 /home/u1803781/public_html/app/Controllers/Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1803781/...', 27, Array)
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->rental('inova')
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-21 13:00:13 --> Trying to access array offset on value of type null
+#0 /home/u1803781/public_html/app/Controllers/Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1803781/...', 27, Array)
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->rental('inn')
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-21 13:00:13 --> Trying to access array offset on value of type null
+#0 /home/u1803781/public_html/app/Controllers/Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1803781/...', 27, Array)
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->rental('inni')
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-21 13:00:13 --> Trying to access array offset on value of type null
+#0 /home/u1803781/public_html/app/Controllers/Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1803781/...', 27, Array)
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->rental('inniv')
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-21 13:00:13 --> Trying to access array offset on value of type null
+#0 /home/u1803781/public_html/app/Controllers/Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1803781/...', 27, Array)
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->rental('inniva')
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-21 13:00:14 --> Trying to access array offset on value of type null
+#0 /home/u1803781/public_html/app/Controllers/Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1803781/...', 27, Array)
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->rental('inno')
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-21 13:00:15 --> Trying to access array offset on value of type null
+#0 /home/u1803781/public_html/app/Controllers/Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1803781/...', 27, Array)
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->rental('innov')
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-21 13:00:18 --> Trying to access array offset on value of type null
+#0 /home/u1803781/public_html/app/Controllers/Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1803781/...', 27, Array)
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->rental('pa')
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-21 13:00:18 --> Trying to access array offset on value of type null
+#0 /home/u1803781/public_html/app/Controllers/Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1803781/...', 27, Array)
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->rental('paj')
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-21 13:00:18 --> Trying to access array offset on value of type null
+#0 /home/u1803781/public_html/app/Controllers/Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1803781/...', 27, Array)
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->rental('paje')
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-21 13:00:19 --> Trying to access array offset on value of type null
+#0 /home/u1803781/public_html/app/Controllers/Home.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', '/home/u1803781/...', 27, Array)
+#1 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->rental('pajer')
+#2 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 /home/u1803781/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/u1803781/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

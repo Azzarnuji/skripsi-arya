@@ -1,0 +1,9 @@
+CRITICAL - 2024-02-27 03:45:25 --> Invalid file: home/about.php
+#0 /home/kame1982/public_html/vendor/codeigniter4/framework/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/about.php')
+#1 /home/kame1982/public_html/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('home/about', Array, true)
+#2 /home/kame1982/public_html/app/Controllers/Home.php(21): view('home/about', Array)
+#3 /home/kame1982/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(837): App\Controllers\Home->about()
+#4 /home/kame1982/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /home/kame1982/public_html/vendor/codeigniter4/framework/system/CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /home/kame1982/public_html/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}

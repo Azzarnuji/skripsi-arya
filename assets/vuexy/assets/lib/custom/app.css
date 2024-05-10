@@ -1,0 +1,45 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f7fa;
+}
+
+#content{
+    width: 100%;
+    height: 100%;
+    background-color: #f8f7fa;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.icon-search{
+    color: #000;
+}
+.icon-search:hover{
+    scale: 1.25;
+}
+
+.hover-scale-1-25:hover{
+    scale: 1.25;
+}
+
+.icon-maximize{
+    color: #000;
+}
+.icon-maximize:hover{
+    scale: 1.25;
+}
+.divider{
+    /* position: relative; */
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+
+.animation-all{
+    transition: all 0.5s ease-in-out;
+}
