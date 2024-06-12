@@ -15,6 +15,7 @@ use App\Models\Driver_Model;
 use App\Models\Reviews_Model;
 use App\Models\Users;
 use App\Models\Users_Model;
+use App\Models\Members_Model;
 
 /**
  * Class BaseController
@@ -34,6 +35,7 @@ class BaseController extends Controller
 	protected $cars;
 	protected $users;
 	protected $drivers;
+	protected $members;
 	/**
 	 * Instance of the main Request object.
 	 *
@@ -77,5 +79,6 @@ class BaseController extends Controller
 		$this->cars = new Cars();
 		$this->users = new Users_Model();
 		$this->drivers = new Driver_Model();
+		$this->members = new Members_Model();
 	}
 }

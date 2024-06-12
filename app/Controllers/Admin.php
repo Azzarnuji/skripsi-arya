@@ -276,6 +276,15 @@ class Admin extends BaseController
 		}
 	}
 
+	public function members()
+	{
+		$data = [
+			"members"=> $this->members->findAll(),
+			"assetsPath" => "../assets/vuexy/assets/"
+		];
+		return view('admin/data_members', $data);
+	}
+
 
 	public function login()
 	{

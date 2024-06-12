@@ -23,12 +23,13 @@
 			<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTambahKendaraan">Tambah Kendaraan</button>
 		</div>
 		<div class="table-responsive text-nowrap">
-			<table class="table">
+			<table class="table" id="carTable">
 				<thead>
 					<tr class="text-nowrap">
 						<th>No</th>
 						<th>Merk Mobil</th>
 						<th>Pabrikan Mobil</th>
+						<th>Nomor Plat</th>
 						<th>Tahun Mobil</th>
 						<th>Harga Lepas Kunci</th>
 						<th>Harga All IN</th>
@@ -44,6 +45,7 @@
 							<th scope="row"><?= $i++ ?></th>
 							<td><?= $car['merk'] ?></td>
 							<td><?= $car['pabrikan'] ?></td>
+							<td><?= $car['nomor_plat'] ?></td>
 							<td><?= $car['tahun'] ?? '-' ?></td>
 							<td><?= $car['hargaOne'] ?></td>
 							<td><?= $car['hargaTwo'] ?></td>
@@ -175,4 +177,9 @@
 		</div>
 	</div>
 </div>
+<script>
+	$(document).ready(()=>{
+		$('#carTable').DataTable()
+	})
+</script>
 <?= $this->endSection() ?>

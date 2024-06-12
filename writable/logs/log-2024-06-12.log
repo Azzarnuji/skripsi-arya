@@ -1,0 +1,57 @@
+ERROR - 2024-06-12 08:35:07 --> Table 'kamandaka.users' doesn't exist
+CRITICAL - 2024-06-12 08:35:07 --> Table 'kamandaka.users' doesn't exist
+#0 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\skripsi-arya\app\Controllers\Admin.php(282): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->login()
+#8 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2024-06-12 08:35:16 --> Table 'kamandaka.users' doesn't exist
+CRITICAL - 2024-06-12 08:35:16 --> Table 'kamandaka.users' doesn't exist
+#0 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\skripsi-arya\app\Controllers\Admin.php(125): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->dataAdmin()
+#8 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-06-12 10:01:43 --> Class "App\Controllers\Members_Model" not found
+#0 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(815): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(415): CodeIgniter\CodeIgniter->createController()
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2024-06-12 10:01:50 --> Class "App\Controllers\Members_Model" not found
+#0 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(815): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(415): CodeIgniter\CodeIgniter->createController()
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2024-06-12 10:03:08 --> Class "App\Controllers\Members_Model" not found
+#0 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(815): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(415): CodeIgniter\CodeIgniter->createController()
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2024-06-12 10:11:48 --> Undefined variable $users
+#0 C:\laragon\www\skripsi-arya\app\Views\admin\data_members.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\laragon\\www\\...', 40)
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('admin/data_memb...', Array, true)
+#4 C:\laragon\www\skripsi-arya\app\Controllers\Admin.php(285): view('admin/data_memb...', Array)
+#5 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->members()
+#6 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
