@@ -16,31 +16,11 @@
 		<div class="layout-container">
 			<!-- Menu -->
 
-			<?= $this->include('template/includes/sidebar') ?>
-
 			<!-- / Menu -->
 
 			<!-- Layout container -->
-			<div class="layout-page">
-				<!-- Navbar -->
+			<?= $this->renderSection('content') ?>
 
-				<?= $this->include('template/includes/navbar') ?>
-
-				<!-- / Navbar -->
-
-				<!-- Content wrapper -->
-				<div class="content-wrapper">
-
-					<!-- Content -->
-					<?= $this->renderSection('content') ?>
-					<!-- / Content -->
-
-					<?= $this->include('template/includes/footer') ?>
-
-					<div class="content-backdrop fade"></div>
-				</div>
-				<!-- Content wrapper -->
-			</div>
 			<!-- / Layout page -->
 		</div>
 

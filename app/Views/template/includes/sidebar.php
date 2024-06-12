@@ -29,14 +29,24 @@
 				<div class="badge bg-primary rounded-pill ms-auto">3</div>
 			</a>
 			<ul class="menu-sub">
-				<li class="menu-item active">
-					<a href="<?= base_url('admin/data-kendaraan') ?>" class="menu-link">
+				<li class="menu-item">
+					<a href="<?= base_url('admin/dataKendaraan') ?>" class="menu-link">
 						<div data-i18n="Data Kendaraan">Data Kendaraan</div>
 					</a>
 				</li>
 				<li class="menu-item">
-					<a href="<?= base_url('admin/data-booking') ?>" class="menu-link">
+					<a href="<?= base_url('admin/dataBooking') ?>" class="menu-link">
 						<div data-i18n="Data Booking">Data Booking</div>
+					</a>
+				</li>
+				<li class="menu-item">
+					<a href="<?= base_url('admin/dataAdmin/?type=view') ?>" class="menu-link">
+						<div data-i18n="Data Admin">Data Admin</div>
+					</a>
+				</li>
+				<li class="menu-item">
+					<a href="<?= base_url('admin/dataSupir/?type=view') ?>" class="menu-link">
+						<div data-i18n="Data Supir">Data Supir</div>
 					</a>
 				</li>
 			</ul>

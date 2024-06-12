@@ -37,10 +37,19 @@ $routes->get('/', 'Home::index');
 $routes->get('/about', 'Home::about');
 $routes->get('/rental', 'Home::rental');
 $routes->get('/rental/(:any)', 'Home::rental/$1');
+$routes->get('/booking/(:any)', 'Home::booking/$1');
 $routes->group('admin', static function ($routes) {
 	$routes->get('/', "Admin::index");
-	$routes->get('/deleteKendaraan/(:any)', "Admin::deleteKendaraam/$1");
+	$routes->get('/dataKendaraan', "Admin::index");
+	$routes->get('/hapusKendaraan/(:any)', "Admin::hapusKendaraan/$1");
+	$routes->get('/detailKendaraan/(:any)', "Admin::detailKendaraan/$1");
+	$routes->get('/editKendaraan/(:any)', "Admin::editKendaraan/$1");
+	$routes->get('/dataAdmin/(:any)', "Admin::dataAdmin/$1");
+	$routes->get('/getDataAdmin/(:any)', "Admin::getDataAdmin/$1");
+	$routes->get('/hapusAdmin/(:any)', "Admin::hapusAdmin/$1");
+	$routes->get('/hapusSupir/(:any)', "Admin::hapusSupir/$1");
 
+	$routes->post('/login', "Admin::login");
 	$routes->post('/tambahKendaraan', "Admin::tambahKendaraan");
 });
 // $routes->get('/detail/(:any)','Home::detail/$1/$2/$3/$4/$5/$6');

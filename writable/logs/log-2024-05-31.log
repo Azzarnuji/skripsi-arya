@@ -1,0 +1,55 @@
+CRITICAL - 2024-05-31 09:37:36 --> syntax error, unexpected end of file
+#0 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('admin/data_admi...', Array, true)
+#2 C:\laragon\www\skripsi-arya\app\Controllers\Admin.php(126): view('admin/data_admi...', Array)
+#3 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->dataAdmin()
+#4 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-05-31 09:42:40 --> syntax error, unexpected end of file
+#0 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('admin/data_admi...', Array, true)
+#2 C:\laragon\www\skripsi-arya\app\Controllers\Admin.php(126): view('admin/data_admi...', Array)
+#3 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->dataAdmin()
+#4 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-05-31 09:44:44 --> Too few arguments to function App\Controllers\Admin::dataAdmin(), 0 passed in C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php on line 837 and exactly 1 expected
+#0 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->dataAdmin()
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2024-05-31 09:45:03 --> Too few arguments to function App\Controllers\Admin::dataAdmin(), 0 passed in C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php on line 837 and exactly 1 expected
+#0 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->dataAdmin()
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2024-05-31 09:45:08 --> Too few arguments to function App\Controllers\Admin::dataAdmin(), 0 passed in C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php on line 837 and exactly 1 expected
+#0 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->dataAdmin()
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2024-05-31 09:45:20 --> Too few arguments to function App\Controllers\Admin::dataAdmin(), 0 passed in C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php on line 837 and exactly 1 expected
+#0 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->dataAdmin()
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2024-05-31 09:56:20 --> Unknown column 'name' in 'field list'
+ERROR - 2024-05-31 09:56:59 --> Unknown column 'name' in 'field list'
+CRITICAL - 2024-05-31 10:01:14 --> Undefined variable $car
+#0 C:\laragon\www\skripsi-arya\app\Views\admin\data_admin.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\laragon\\www\\...', 43)
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('admin/data_admi...', Array, true)
+#4 C:\laragon\www\skripsi-arya\app\Controllers\Admin.php(128): view('admin/data_admi...', Array)
+#5 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->dataAdmin()
+#6 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

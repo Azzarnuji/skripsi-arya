@@ -11,7 +11,10 @@ use Psr\Log\LoggerInterface;
 use App\Helpers\Any_Helper;
 use App\Models\Adt_Model;
 use App\Models\Cars;
+use App\Models\Driver_Model;
 use App\Models\Reviews_Model;
+use App\Models\Users;
+use App\Models\Users_Model;
 
 /**
  * Class BaseController
@@ -29,6 +32,8 @@ class BaseController extends Controller
 	protected $AdtModel;
 	protected $Reviews;
 	protected $cars;
+	protected $users;
+	protected $drivers;
 	/**
 	 * Instance of the main Request object.
 	 *
@@ -70,5 +75,7 @@ class BaseController extends Controller
 		$this->AdtModel = new Adt_Model();
 		$this->Reviews = new Reviews_Model();
 		$this->cars = new Cars();
+		$this->users = new Users_Model();
+		$this->drivers = new Driver_Model();
 	}
 }

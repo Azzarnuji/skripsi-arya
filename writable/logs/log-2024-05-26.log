@@ -1,0 +1,124 @@
+CRITICAL - 2024-05-26 02:08:08 --> Class "App\Models\Users" not found
+#0 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(815): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(415): CodeIgniter\CodeIgniter->createController()
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2024-05-26 02:49:33 --> Invalid file: admin/detail_kendaraan.php
+#0 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/detail_ke...')
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('admin/detail_ke...', Array, true)
+#2 C:\laragon\www\skripsi-arya\app\Controllers\Admin.php(60): view('admin/detail_ke...', Array)
+#3 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->detailKendaraan('hiace')
+#4 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-05-26 02:49:38 --> Invalid file: admin/detail_kendaraan.php
+#0 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/detail_ke...')
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('admin/detail_ke...', Array, true)
+#2 C:\laragon\www\skripsi-arya\app\Controllers\Admin.php(60): view('admin/detail_ke...', Array)
+#3 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->detailKendaraan('ertiga-dynbs')
+#4 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-05-26 03:09:29 --> Undefined variable $assetsPath
+#0 C:\laragon\www\skripsi-arya\app\Views\template\admin-template.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\laragon\\www\\...', 3)
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(226): CodeIgniter\View\View->render('template/admin-...', Array, true)
+#4 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('admin/data_kend...', Array, true)
+#5 C:\laragon\www\skripsi-arya\app\Controllers\Admin.php(14): view('admin/data_kend...', Array)
+#6 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->index()
+#7 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-26 03:09:37 --> Undefined variable $assetsPath
+#0 C:\laragon\www\skripsi-arya\app\Views\admin\data_kendaraan.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\laragon\\www\\...', 1)
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('admin/data_kend...', Array, true)
+#4 C:\laragon\www\skripsi-arya\app\Controllers\Admin.php(15): view('admin/data_kend...', Array)
+#5 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->index()
+#6 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-26 03:10:20 --> Undefined variable $assetsPath
+#0 C:\laragon\www\skripsi-arya\app\Views\template\admin-template.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\laragon\\www\\...', 3)
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(226): CodeIgniter\View\View->render('template/admin-...', Array, true)
+#4 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('admin/edit_kend...', Array, true)
+#5 C:\laragon\www\skripsi-arya\app\Controllers\Admin.php(54): view('admin/edit_kend...', Array)
+#6 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->editKendaraan('ertiga-dynbs')
+#7 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-26 03:21:49 --> Attempt to read property "merk" on array
+#0 C:\laragon\www\skripsi-arya\app\Views\admin\edit_kendaraan.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\laragon\\www\\...', 13)
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('admin/edit_kend...', Array, true)
+#4 C:\laragon\www\skripsi-arya\app\Controllers\Admin.php(55): view('admin/edit_kend...', Array)
+#5 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->editKendaraan('ertiga-dynbs')
+#6 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-26 03:37:47 --> Undefined array key "deskripsi"
+#0 C:\laragon\www\skripsi-arya\app\Views\admin\edit_kendaraan.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\laragon\\www\\...', 99)
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('admin/edit_kend...', Array, true)
+#4 C:\laragon\www\skripsi-arya\app\Controllers\Admin.php(55): view('admin/edit_kend...', Array)
+#5 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->editKendaraan('ertiga-npmoo')
+#6 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-26 03:57:57 --> Undefined array key "image"
+#0 C:\laragon\www\skripsi-arya\app\Views\admin\edit_kendaraan.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\laragon\\www\\...', 121)
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('admin/edit_kend...', Array, true)
+#4 C:\laragon\www\skripsi-arya\app\Controllers\Admin.php(55): view('admin/edit_kend...', Array)
+#5 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->editKendaraan('ertiga-npmoo')
+#6 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-26 04:06:11 --> Undefined array key "image"
+#0 C:\laragon\www\skripsi-arya\app\Views\admin\data_kendaraan.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\laragon\\www\\...', 52)
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('admin/data_kend...', Array, true)
+#4 C:\laragon\www\skripsi-arya\app\Controllers\Admin.php(15): view('admin/data_kend...', Array)
+#5 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->index()
+#6 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-26 04:29:12 --> Invalid file: admin/detail_kendaraan.php
+#0 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/detail_ke...')
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('admin/detail_ke...', Array, true)
+#2 C:\laragon\www\skripsi-arya\app\Controllers\Admin.php(114): view('admin/detail_ke...', Array)
+#3 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->detailKendaraan('ertiga-cuusa')
+#4 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-05-26 04:29:42 --> Undefined variable $assetsPath
+#0 C:\laragon\www\skripsi-arya\app\Views\template\admin-template.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\laragon\\www\\...', 3)
+#1 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\View\View.php(226): CodeIgniter\View\View->render('template/admin-...', Array, true)
+#4 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('admin/detail_ke...', Array, true)
+#5 C:\laragon\www\skripsi-arya\app\Controllers\Admin.php(114): view('admin/detail_ke...', Array)
+#6 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(837): App\Controllers\Admin->detailKendaraan('ertiga-cuusa')
+#7 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\laragon\www\skripsi-arya\vendor\codeigniter4\framework\system\CodeIgniter.php(331): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\skripsi-arya\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}

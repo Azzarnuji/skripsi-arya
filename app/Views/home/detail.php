@@ -53,7 +53,7 @@ $textEncode = urlencode($text);
 			</ul>
 		</div>
 		<div class="col-12 d-flex justify-content-center" style="margin-top: 20px;">
-			<a href="https://api.whatsapp.com/send?phone=62811905053&text=<?= $textEncode; ?>" class="btn">Booking Sekarang</a>
+			<a href="<?= base_url("/booking/" . $rental['idMobil']); ?>" class="btn btn-primary">Booking Sekarang</a>
 		</div>
 	</div>
 	<hr>
@@ -70,9 +70,36 @@ $textEncode = urlencode($text);
 			<p>
 				<?= $rental['description']; ?>
 			</p>
-
 		</div>
+	</div>
+	<div class="modal fade" id="modalBooking" tabindex="-1" style="display: none;" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalViewTitle">Form Booking</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<form action="<?= base_url('admin/dataAdmin') ?>" method="POST" enctype="multipart/form-data">
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12 mb-3">
+								<label for="nameWithTitle" class="form-label">Nama User</label>
+								<input type="text" name="nameUser" id="nameUser" class="form-control" placeholder="Enter Name" required>
+							</div>
+							<div class="col-md-12 mb-3">
+								<label for="nameWithTitle" class="form-label">Email User</label>
+								<input type="text" name="emailUser" id="emailUser" class="form-control" placeholder="Enter Name" required>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-label-secondary waves-effect" data-bs-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-primary waves-effect waves-light">Save changes</button>
+					</div>
 
+				</form>
+			</div>
+		</div>
 	</div>
 </div>
 
