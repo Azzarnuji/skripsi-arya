@@ -24,10 +24,10 @@
 <script src="<?= base_url('assets/vuexy/assets/js/myscript.js') ?>"></script>
 <script src="<?= base_url('assets/vuexy/assets/vendor/libs/bs-stepper/bs-stepper.js') ?>"></script>
 <!-- Page JS -->
-{{-- <script src="<?= base_url('assets/vuexy/assets/js/dashboards-crm.js') ?>"></script>
+<script src="<?= base_url('assets/vuexy/assets/js/dashboards-crm.js') ?>"></script>
 <script src="<?= base_url('assets/vuexy/assets/vendor/js/dropdown-hover.js') ?>"></script>
 
 <script src="<?= base_url('assets/vuexy/assets/js/forms-pickers.js') ?>"></script>
 <script src="<?= base_url('assets/vuexy/assets/vendor/libs/dropzone/dropzone.js') ?>"></script>
 <script src="<?= base_url('assets/vuexy/assets/js/forms-file-upload.js') ?>"></script>
-<script src="<?= base_url('assets/vuexy/assets/vendor/libs/jkanban/jkanban.js') ?>"></script> --}}
+<script src="<?= base_url('assets/vuexy/assets/vendor/libs/jkanban/jkanban.js') ?>"></script>

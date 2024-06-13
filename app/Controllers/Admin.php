@@ -12,7 +12,7 @@ class Admin extends BaseController
 			"cars" => $this->cars->findAll(),
 			"assetsPath" => "assets/vuexy/assets/"
 		];
-		return view('admin/data_kendaraan', $data);
+		return view('admin/login', $data);
 	}
 	public function dataKendaraan()
 	{
@@ -288,6 +288,17 @@ class Admin extends BaseController
 
 	public function login()
 	{
+		
 		$query = $this->users->where('email', $this->request->getPost('email'))->first();
+		$password = $this->request->getPost('password');
+		if($query != null){
+			if(password_verify($password, $query['password'])){
+				return redirect()->to("admin/dataKendaraan");
+			}else{
+				return redirect()->to('/admin')->with('failed', 'Username / Password Salah');
+			}
+		}else{
+			return redirect()->to('/admin')->with('failed', 'Username / Password Salah');
+		}
 	}
 }
