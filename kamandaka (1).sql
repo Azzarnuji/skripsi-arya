@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 12, 2024 at 01:25 PM
+-- Generation Time: Jun 19, 2024 at 02:51 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -28,13 +28,22 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `bookings` (
+  `booking_id` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `email` varchar(50) NOT NULL,
   `idMobil` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `pakai_supir` varchar(10) NOT NULL,
   `mulai_sewa` date NOT NULL,
   `selesai_sewa` date NOT NULL,
   `total_hari` int NOT NULL,
-  `payment_id` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `payment_id` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `bookings`
+--
+
+INSERT INTO `bookings` (`booking_id`, `email`, `idMobil`, `pakai_supir`, `mulai_sewa`, `selesai_sewa`, `total_hari`, `payment_id`) VALUES
+('B-1406', 'azzarnuzy93@gmail.com', 'alphard', 'ya', '2024-06-20', '2024-06-23', 3, 'P-1038');
 
 -- --------------------------------------------------------
 
@@ -64,12 +73,20 @@ INSERT INTO `drivers` (`id`, `name`, `no_ktp`, `no_sim`) VALUES
 
 CREATE TABLE `members` (
   `email` varchar(50) NOT NULL,
+  `nama` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `address` text NOT NULL,
-  `phone` int NOT NULL,
-  `no_ktp` int NOT NULL,
-  `no_sim` int DEFAULT NULL
+  `phone` varchar(20) NOT NULL,
+  `no_ktp` varchar(20) NOT NULL,
+  `no_sim` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `members`
+--
+
+INSERT INTO `members` (`email`, `nama`, `password`, `address`, `phone`, `no_ktp`, `no_sim`) VALUES
+('azzarnuzy93@gmail.com', 'Azzaarnuji Nur Ukhrowi', '$2y$10$JoKBSzNMHDmaSdvwIsuswulR7Bun52OAN0uCKE/QfHwiD3NkfLapi', 'Kp.Cakung', '085883260823', '8172817287281', '81721728118728');
 
 -- --------------------------------------------------------
 
@@ -79,10 +96,18 @@ CREATE TABLE `members` (
 
 CREATE TABLE `payments` (
   `payment_id` varchar(32) NOT NULL,
+  `booking_id` varchar(30) NOT NULL,
   `bukti_img` text NOT NULL,
-  `wajib_bayar` int NOT NULL,
+  `wajib_bayar` varchar(50) NOT NULL,
   `status_payment` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `payments`
+--
+
+INSERT INTO `payments` (`payment_id`, `booking_id`, `bukti_img`, `wajib_bayar`, `status_payment`) VALUES
+('P-1038', 'B-1406', '1718808553_84400bc29b923a59385f.jpg', 'Rp 8.400.000', 0);
 
 -- --------------------------------------------------------
 
@@ -121,7 +146,7 @@ INSERT INTO `rental` (`id`, `idMobil`, `merk`, `pabrikan`, `tahun`, `hargaOne`, 
 (6, 'fortuner', 'Fortuner', 'Toyota', 2022, 'Rp1.800.000', 'Rp1.300.000', 'Pertama kali diluncurkan pada 2005, Toyota Fortuner langsung terdaftar di hati masyarakat Indonesia. Fortuner menjadi pilihan SUV untuk mereka yang perlu mobil berdaya angkut banyak. Dengan tawaran jumlah kursi hingga tujuh dan performa yang dapat diandalkan. Itu kemudian menjadikan Fortuner sebagai opsi yang lebih mewah dan bertolak belakang dari Kijang Innova. Wajar, sebab memang diposisikan begitu.<br>Dalam perkembangannya, generasi kedua Fortuner lahir mula 2016 dan pulang diminati. Apalagi, reputasinya yang lebih dari 10 tahun, menciptakan orang percaya guna memilih Fortuner. Sebagai strategi pemasaran, Toyota sekarang menawarkan 8 tipe varian berbeda. Pilihan utama dari mesin: bensin dan diesel, serta tidak banyak pembeda transmisi. Ada pun pembeda tipe penggerak roda 4×2 dan 4×4.<br>Nomenklatur SRZ, penanda menggunakan mesin bensin. Kode mesin 2TR-FE, 4-silinder 2,7 liter dual VVT-i. Sedang VRZ, jadi varian lebih tinggi dengan menggendong mesin turbodiesel 2,4 liter VNT berkode 2GD-FTV. Jantung mekanis anyar itu, punya performa yang andal dan lebih bertenaga dari mesin sebelumnya. Tambahkan dengan banyaknya fitur dan teknologi yang dibenamkan. Mulai dari lampu LED hingga pintu bagasi elektrik. Fortuner punya penawaran paket yang menggiurkan di segmennya.Boleh dibilang, Fortuner jadi tulang punggung penjualan Toyota guna segmen SUV. Pasalnya, mobil yang diproduksi di domestik ini pun jadi model yang diekspor oleh manufaktur ke tidak sedikit negara. 2019 ini, Fortuner dirapikan khususnya versi TRD Sportivo. Perubahan minor tampak di unsur aerokit yang diusung. Tidak tidak sedikit perubahannya.', 'fortuner.webp', '', '', '', '', '', 'non'),
 (7, 'hiace-premio', 'Hiace Premio', 'Toyota', 2020, 'Rp1.800.000', 'Rp1.200.000', 'Eksterior Toyota HiAce Premio tampil lebih menarik, tersebut tercermin dari lekukan tubuh unsur samping, dan mempunyai bonnet lebih panjang.“Desain memang bertolak belakang dari tipe di bawahnya. Siluet pada bodi samping bertolak belakang lebih canggih dan berkelas,” ungkap Anton.Masuk ke unsur kabin depan, sekarang lebih nyaman berkat tuas transmisi yang gampang diraih oleh pengemudi, dan pandangan menyaksikan jalan atau terbit lebih luas. Pintu samping eksklusif penumpang sekarang lebih lebar sehingga mempermudah penumpang masuk dan turun. Sedangkan lokasi kabin lebih panjang dan luas dibanding tipe satunya. Mobil ini panjangnya 5.915 mm dikomparasikan tipe Commuter yang melulu 5.380 mm. Lebarnya pun menjangkau 1.950 mm, lebih lebar dibanding tipe Commuter yang melulu 1.880 mm. Tinggi tidak banyak berkurang menjadi 2.280 mm dibanding Commuter sampai-sampai menjadi 2.285 mm. Dengan jarak sumbu roda (wheelbase) 3.860 mm, HiAce Premio dianggap jadi lebih stabil.', 'hiace-premio.webp', '', '', '', '', '', 'non'),
 (12, 'innova', 'Innova', 'Toyota', 2022, 'Rp1.300.000', 'Rp750.000', 'Nama Kijang telah familiar didengar guna keluarga Indonesia. MPV 7-seater ini, tak asing dengan kabin lapang nan nyaman. Dari generasi ke generasi, ia tampil semakin mewah dan lengkap.Trim terbagi menjadi tiga: G, Q, dan V. Semuanya mengejar fitur keselamatan standar Dual SRS Airbag, knee airbag, serta ABS+EBD. Sensasi kemewahan hadir di tipe Q dan V. Aura ini diperkuat dengan pemakaian premium illumination kabin serta panel AC digital. Di balik bangku depan terdapat sebuah meja kecil yang terlipat, bak berada di kabin pesawat. Tipe Q menggunakan bangku captain seat.Toyota tawarkan dua opsi mesin, bensin dan diesel. Untuk generasi teranyar, Innova mengusung mesin diesel yang baru berkode 2GD-FTV. Kapasitasnya sebesar 2.400 cc, dilengkapi dengan VNT Intercooler. Dorongan turbo membuatnya dapat mengail tenaga 149 ps di 3.400 rpm dengan torsi mencapai 360 Nm. Opsi ini hanya tersedia di Tipe G dan Tipe Q.Pilihan mesin bensin masih mengandalkan unit yang sama dengan generasi sebelumnya. Unit 1TR-FE berkapasitas 2.000 cc dilengkapi Dual VVT-i. Semburan tenaga maksimumnya 139 ps di 5.600 rpm dengan torsi puncak 182 Nm di 4.000 rpm.Kijang Innova diproduksi langsung oleh TMMIN (Toyota Motor Manufacturing Indonesia) di Karawang. Namun mobil ini tak hanya dinikmati pasar domestik, ia juga diekspor ke sebanyak negara di Asia, Timur Tengah dan Afrika.', 'innova.webp', '', '', '', '', '', 'non'),
-(32, 'ertiga-cuusa', 'Ertiga', 'Suzuki', 2012, 'Rp.500.000', 'Rp.1000.000', '																		Test																', '1716715729_22bdbd019da6afccf5c9.jpg', 'B 1111 KZP', 'MHGSAU76JASISA', 'MM776GHAKSN', '1500 CC', 'Bensin', '');
+(32, 'ertiga-cuusa', 'Ertiga', 'Suzuki', 2012, 'Rp500.000', 'Rp100.000', '																		Test																', '1716715729_22bdbd019da6afccf5c9.jpg', 'B 1111 KZP', 'MHGSAU76JASISA', 'MM776GHAKSN', '1500 CC', 'Bensin', '');
 
 -- --------------------------------------------------------
 
@@ -177,8 +202,9 @@ INSERT INTO `users` (`email`, `password`, `name`) VALUES
 -- Indexes for table `bookings`
 --
 ALTER TABLE `bookings`
-  ADD KEY `email_fk` (`email`),
+  ADD PRIMARY KEY (`booking_id`),
   ADD KEY `idMobil` (`idMobil`),
+  ADD KEY `email_fk` (`email`),
   ADD KEY `payment_id_fk` (`payment_id`);
 
 --
@@ -197,7 +223,8 @@ ALTER TABLE `members`
 -- Indexes for table `payments`
 --
 ALTER TABLE `payments`
-  ADD PRIMARY KEY (`payment_id`);
+  ADD PRIMARY KEY (`payment_id`),
+  ADD KEY `booking_id` (`booking_id`);
 
 --
 -- Indexes for table `rental`
@@ -248,9 +275,9 @@ ALTER TABLE `reviews`
 -- Constraints for table `bookings`
 --
 ALTER TABLE `bookings`
-  ADD CONSTRAINT `email_fk` FOREIGN KEY (`email`) REFERENCES `members` (`email`),
-  ADD CONSTRAINT `id_mobil_fk` FOREIGN KEY (`idMobil`) REFERENCES `rental` (`idMobil`),
-  ADD CONSTRAINT `payment_id_fk` FOREIGN KEY (`payment_id`) REFERENCES `payments` (`payment_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `email_fk` FOREIGN KEY (`email`) REFERENCES `members` (`email`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `id_mobil_fk` FOREIGN KEY (`idMobil`) REFERENCES `rental` (`idMobil`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `payment_id_fk` FOREIGN KEY (`payment_id`) REFERENCES `payments` (`payment_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
