@@ -22,8 +22,8 @@
 			<h5>Data Kendaraan</h5>
 			<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTambahKendaraan">Tambah Kendaraan</button>
 		</div>
-		<div class="table-responsive text-nowrap">
-			<table class="table" id="carTable">
+		<div class="card-datatable table-responsive text-nowrap">
+			<table class="datatables-basic table" id="carTable">
 				<thead>
 					<tr class="text-nowrap">
 						<th>No</th>
@@ -178,7 +178,7 @@
 	</div>
 </div>
 <script>
-	$(document).ready(()=>{
+	$(document).ready(() => {
 		$('#carTable').DataTable()
 	})
 </script>

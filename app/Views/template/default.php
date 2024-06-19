@@ -204,6 +204,11 @@
 
 					<span id="aria-label-txt">Daftar Harga</span>
 				</a>
+				<a href="<?= base_url('home/login'); ?>" class="btn" aria-labelledby="aria-label-txt">
+
+
+					<span id="aria-label-txt">Login</span>
+				</a>
 
 				<button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
 					<span class="one"></span>

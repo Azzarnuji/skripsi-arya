@@ -20,3 +20,13 @@ function limitWords($string, $limit)
 
 	return $limitedString;
 }
+
+function getStatusPayment(int $status)
+{
+	$data = [
+		0 => 'Menunggu Konfirmasi Admin',
+		1 => 'Ditolak',
+		2 => 'Lunas'
+	];
+	return $data[$status];
+}

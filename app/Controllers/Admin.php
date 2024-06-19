@@ -279,25 +279,68 @@ class Admin extends BaseController
 	public function members()
 	{
 		$data = [
-			"members"=> $this->members->findAll(),
+			"members" => $this->members->findAll(),
 			"assetsPath" => "../assets/vuexy/assets/"
 		];
 		return view('admin/data_members', $data);
 	}
 
 
+	public function dataBooking()
+	{
+		$query = $this->members->join('bookings', 'bookings.email = members.email')
+			->join('payments', 'payments.booking_id = bookings.booking_id')
+			->join('rental', 'rental.idMobil = bookings.idMobil')->get()->getResultArray();
+		$data = [
+			'dataSewa' => $query,
+			"assetsPath" => "../assets/vuexy/assets/"
+		];
+		// dd($query);
+		return view('admin/data_booking', $data);
+	}
+
+	public function detailBooking()
+	{
+		$request = \Config\Services::request();
+		$lastSegment = $request->uri->getSegment($request->uri->getTotalSegments());
+		$query = $this->members->join('bookings', 'bookings.email = members.email')
+			->join('payments', 'payments.booking_id = bookings.booking_id')
+			->join('rental', 'rental.idMobil = bookings.idMobil')->where('bookings.booking_id', $lastSegment)->first();
+		$data = [
+			'dataSewa' => $query,
+			"assetsPath" => "../../assets/vuexy/assets/"
+		];
+		// dd($data);
+		return view('admin/detail_booking', $data);
+	}
+
+	public function updateBooking()
+	{
+		$idPayment = $this->request->getPost('idPayment');
+		$idBooking = $this->request->getPost('idBooking');
+		$statusPayment = $this->request->getPost('update_status');
+		try {
+			$this->payments->where('payment_id', $idPayment)->set(['status_payment' => $statusPayment])->update();
+			return redirect()->to('admin/detailBooking/' . $idBooking)->with('success', 'Update Booking Berhasil');
+		} catch (\Exception $e) {
+			return redirect()->to('admin/detailBooking/' . $idBooking)->with('failed', 'Update Booking Gagal');
+			//throw $th;
+		}
+	}
+
+
 	public function login()
 	{
-		
+
 		$query = $this->users->where('email', $this->request->getPost('email'))->first();
 		$password = $this->request->getPost('password');
-		if($query != null){
-			if(password_verify($password, $query['password'])){
+		if ($query != null) {
+			if (password_verify($password, $query['password'])) {
 				return redirect()->to("admin/dataKendaraan");
-			}else{
+			} else {
 				return redirect()->to('/admin')->with('failed', 'Username / Password Salah');
 			}
-		}else{
+		} else {
 			return redirect()->to('/admin')->with('failed', 'Username / Password Salah');
 		}
 	}

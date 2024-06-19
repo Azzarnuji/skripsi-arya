@@ -1,81 +1,13 @@
-<?= $this->extend('template/booking-template', ['assetsPath' => $assetsPath]) ?>
+<?= $this->extend('template/dashboard-template') ?>
 <?= $this->section('content') ?>
 <div class="container-xxl">
-	<?php if (session()->getFlashdata('success')) : ?>
-		<div class="alert alert-success d-flex align-items-center" role="alert">
-			<span class="alert-icon text-success me-2">
-				<i class="ti ti-check ti-xs"></i>
-			</span>
-			<?= session()->getFlashdata('success'); ?>
-		</div>
-	<?php endif; ?>
-	<?php if (session()->getFlashdata('failed')) : ?>
-		<div class="alert alert-danger d-flex align-items-center" role="alert">
-			<span class="alert-icon text-danger me-2">
-				<i class="ti ti-ban ti-xs"></i>
-			</span>
-			<?= session()->getFlashdata('failed'); ?>
-		</div>
-	<?php endif; ?>
-	<div class="card">
+	<div class="card mt-5">
 		<div class="card-header d-flex align-items-center justify-content-between">
 			<h5>Form Booking</h5>
-			<a href="<?= base_url() ?>" class="btn btn-primary">Back</a>
+			<a href="<?= base_url('dashboard') ?>" class="btn btn-primary">Back</a>
 		</div>
-		<form class="card-body" action="<?= base_url('home/booking') ?>" method="post" enctype="multipart/form-data">
-			<h6>1. Detail Akun</h6>
-			<div class="row mb-3">
-				<label class="col-sm-3 col-form-label" for="multicol-email">Email</label>
-				<div class="col-sm-9">
-					<div class="input-group input-group-merge">
-						<input type="text" id="multicol-email" class="form-control" name="email" placeholder="john.doe" aria-label="john.doe" aria-describedby="multicol-email2">
-						<span class="input-group-text" id="multicol-email2">@example.com</span>
-					</div>
-				</div>
-			</div>
-			<div class="row form-password-toggle">
-				<label class="col-sm-3 col-form-label" for="multicol-password">Password</label>
-				<div class="col-sm-9">
-					<div class="input-group input-group-merge">
-						<input type="password" id="multicol-password" name="password" class="form-control" placeholder="············" aria-describedby="multicol-password2">
-						<span class="input-group-text cursor-pointer" id="multicol-password2"><i class="ti ti-eye-off"></i></span>
-					</div>
-				</div>
-			</div>
-			<hr class="my-4 mx-n4">
-			<h6>2. Personal Info</h6>
-			<div class="row mb-3">
-				<label class="col-sm-3 col-form-label" for="multicol-full-name">Nama Lengkap</label>
-				<div class="col-sm-9">
-					<input type="text" id="multicol-full-name" name="nama_lengkap" class="form-control" placeholder="John Doe">
-				</div>
-			</div>
-			<div class="row mb-3">
-				<label class="col-sm-3 col-form-label" for="multicol-country">Alamat</label>
-				<div class="col-sm-9">
-					<textarea name="alamat" class="form-control" id="alamat" style="width:100%;"></textarea>
-				</div>
-			</div>
-			<div class="row mb-3">
-				<label class="col-sm-3 col-form-label" for="multicol-phone">Nomor Handphone</label>
-				<div class="col-sm-9">
-					<input type="text" name="no_hp" class="form-control" placeholder="658 799 8941" aria-label="658 799 8941">
-				</div>
-			</div>
-			<div class="row mb-3">
-				<label class="col-sm-3 col-form-label" for="multicol-phone">Nomor KTP</label>
-				<div class="col-sm-9">
-					<input type="text" name="no_ktp" class="form-control" placeholder="No Ktp" aria-label="658 799 8941">
-				</div>
-			</div>
-			<div class="row mb-3">
-				<label class="col-sm-3 col-form-label" for="multicol-phone">Nomor SIM</label>
-				<div class="col-sm-9">
-					<input type="text" name="no_sim" class="form-control" placeholder="No SIM" aria-label="658 799 8941">
-				</div>
-			</div>
-			<hr class="my-4 mx-n4">
-			<h6>3. Detail Sewa</h6>
+		<form class="card-body" action="<?= base_url('dashboard/sewaKendaraan') ?>" method="post" enctype="multipart/form-data">
+			<h6>1. Detail Sewa</h6>
 			<div class="row mb-3">
 				<label class="col-sm-3 col-form-label" for="multicol-email">Pakai Supir</label>
 				<div class="col-sm-9">
@@ -129,7 +61,7 @@
 				</div>
 			</div>
 			<div class="row mb-3">
-				<label class="col-sm-3 col-form-label" for="multicol-email">Bukti Pembayaran</label>
+				<label class="col-sm-3 col-form-label" for="multicol-email">Bukti Bayar</label>
 				<div class="col-sm-9">
 					<input type="file" class="form-control" name="bukti_bayar" id="bukti_bayar">
 				</div>

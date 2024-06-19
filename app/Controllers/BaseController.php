@@ -10,12 +10,14 @@ use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 use App\Helpers\Any_Helper;
 use App\Models\Adt_Model;
+use App\Models\Booking_Model;
 use App\Models\Cars;
 use App\Models\Driver_Model;
 use App\Models\Reviews_Model;
 use App\Models\Users;
 use App\Models\Users_Model;
 use App\Models\Members_Model;
+use App\Models\Payment_Model;
 
 /**
  * Class BaseController
@@ -36,6 +38,8 @@ class BaseController extends Controller
 	protected $users;
 	protected $drivers;
 	protected $members;
+	protected $payments;
+	protected $bookings;
 	/**
 	 * Instance of the main Request object.
 	 *
@@ -80,5 +84,7 @@ class BaseController extends Controller
 		$this->users = new Users_Model();
 		$this->drivers = new Driver_Model();
 		$this->members = new Members_Model();
+		$this->payments = new Payment_Model();
+		$this->bookings = new Booking_Model();
 	}
 }
