@@ -32,8 +32,6 @@ use App\Models\Payment_Model;
 class BaseController extends Controller
 {
 	protected $anyHelpers;
-	protected $AdtModel;
-	protected $Reviews;
 	protected $cars;
 	protected $users;
 	protected $drivers;
@@ -48,6 +46,8 @@ class BaseController extends Controller
 	protected $request;
 	protected $response;
 	protected $session;
+
+	protected $validation;
 
 	/**
 	 * An array of helpers to be loaded automatically upon
@@ -78,13 +78,12 @@ class BaseController extends Controller
 		$this->request = $request;
 		$this->response = $response;
 		$this->anyHelpers = new Any_Helper;
-		$this->AdtModel = new Adt_Model();
-		$this->Reviews = new Reviews_Model();
 		$this->cars = new Cars();
 		$this->users = new Users_Model();
 		$this->drivers = new Driver_Model();
 		$this->members = new Members_Model();
 		$this->payments = new Payment_Model();
 		$this->bookings = new Booking_Model();
+		$this->validation = \Config\Services::validation();
 	}
 }

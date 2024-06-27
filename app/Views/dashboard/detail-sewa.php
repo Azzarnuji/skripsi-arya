@@ -6,7 +6,7 @@
 			<h5>Detail Sewa</h5>
 			<a href="<?= base_url('dashboard') ?>" class="btn btn-primary">Back</a>
 		</div>
-		<form class="card-body" action="<?= base_url('home/booking') ?>" method="post">
+		<form class="card-body" action="#" onsubmit="return false;" method="post">
 			<h6>1. Detail Akun</h6>
 			<div class="row mb-3">
 				<label class="col-sm-3 col-form-label" for="multicol-email">Email</label>
@@ -99,13 +99,18 @@
 					<input type="text" class="form-control" name="total_harga" id="total_harga" value="<?= getStatusPayment($dataSewa['status_payment']); ?>" readonly placeholder="RP. 0" readonly="readonly">
 				</div>
 			</div>
-			<div class="pt-4">
-				<div class="row justify-content-end">
-					<div class="col-sm-9">
-						<a href="<?= base_url('dashboard') ?>" class="btn btn-label-secondary waves-effect">Back</a>
+			<?php if($dataSewa['status_payment'] == 0): ?>
+				<div class="pt-4">
+					<div class="row justify-content-end">
+						<div class="col-sm-9">
+							<a href="<?= base_url('dashboard/sewaKendaraan?type=payment&bookingid='.$dataSewa['booking_id']) ?>" class="btn btn-primary waves-effect">Bayar</a>
+							<button type="button" class="btn btn-danger waves-effect" onclick="window.askBeforeExecution('Yakin Batalkan ?, Ini Akan Menghapus Data Sewa Anda',()=>{
+								window.location.href = '<?= base_url('dashboard/sewaKendaraan?type=cancel&bookingid='.$dataSewa['booking_id']) ?>';
+							})">Batalkan</button>
+						</div>
 					</div>
 				</div>
-			</div>
+			<?php endif; ?>
 		</form>
 	</div>
 </div>

@@ -117,16 +117,18 @@
 					<input type="text" class="form-control" name="total_harga" id="total_harga" value="<?= getStatusPayment($dataSewa['status_payment']); ?>" readonly placeholder="RP. 0" readonly="readonly">
 				</div>
 			</div>
-			<div class="row mb-3">
-				<label class="col-sm-3 col-form-label" for="multicol-email">Update Status Pembayaraan</label>
-				<div class="col-sm-9">
-					<select name="update_status" class="form-select select2" id="" data-placeholder="Pilih Status" required>
-						<option></option>
-						<option value="2">Approve</option>
-						<option value="1">Reject</option>
-					</select>
+			<?php if($dataSewa['status_payment'] != 0): ?>
+				<div class="row mb-3">
+					<label class="col-sm-3 col-form-label" for="multicol-email">Update Status Pembayaraan</label>
+					<div class="col-sm-9">
+						<select name="update_status" class="form-select select2" id="" data-placeholder="Pilih Status" required>
+							<option></option>
+							<option value="2">Approve</option>
+							<option value="3">Reject</option>
+						</select>
+					</div>
 				</div>
-			</div>
+			<?php endif; ?>
 			<div class="row mb-3">
 				<label class="col-sm-3 col-form-label" for="multicol-email">Bukti Bayar</label>
 				<div class="col-sm-9">

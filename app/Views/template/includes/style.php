@@ -35,3 +35,4 @@
 <link rel="stylesheet" href="<?= base_url('assets/vuexy/assets/vendor/libs/dropzone/dropzone.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/vuexy/assets/vendor/libs/jkanban/jkanban.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/vuexy/assets/vendor/css/pages/app-kanban.css') ?>">
+<link rel="stylesheet" href="<?= base_url('assets/vuexy/assets/vendor/css/pages/page-auth.css')?>" />

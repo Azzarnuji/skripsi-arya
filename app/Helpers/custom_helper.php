@@ -24,9 +24,29 @@ function limitWords($string, $limit)
 function getStatusPayment(int $status)
 {
 	$data = [
-		0 => 'Menunggu Konfirmasi Admin',
-		1 => 'Ditolak',
-		2 => 'Lunas'
+		0 => 'Menunggu Pembyaran',
+		1 => 'Menunggu Konfirmasi Admin',
+		2 => 'Lunas',
+		3 => 'Pembayaran Ditolak',
+		4 => 'Dibatalkan oleh Pelanggan',
 	];
+	// $data = [
+	// 	0 => 'Menunggu Konfirmasi Admin',
+	// 	1 => 'Ditolak',
+	// 	2 => 'Lunas',
+	// 	3 => 'Menunggu Pembayaran'
+	// ];
 	return $data[$status];
+}
+
+if(! function_exists('getErrorValidation')){
+
+	function getErrorValidation($sessionName,$fieldName)
+	{
+		if(session()->has($sessionName) && session()->getFlashdata($sessionName) != null){
+			$error = session()->getFlashdata($sessionName);
+			$error = $error[$fieldName] ?? null;
+			return $error;
+		}
+	}
 }

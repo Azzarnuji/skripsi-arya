@@ -8,9 +8,7 @@ class Home extends BaseController
 	{
 		$sendData = [
 			'dataMeta' => $this->anyHelpers->createMeta()->getMeta(),
-			'daftarRental' => $this->AdtModel->where('status !=', 'highlight')->findAll(),
-			'highlight' => $this->AdtModel->where('status', 'highlight')->first(),
-			'reviews' => $this->Reviews->findAll()
+			'daftarRental' => $this->cars->where('tampil_homepage =', 'ya')->findAll(),
 		];
 		return view('home/index', $sendData);
 	}
@@ -27,7 +25,7 @@ class Home extends BaseController
 			$sendData = [
 				'dataMeta' => $this->anyHelpers->createMeta('rental', $id)->getMeta(),
 				'id' => $id,
-				'rental' => $this->AdtModel->where('idMobil', $id)->first()
+				'rental' => $this->cars->where('idMobil', $id)->first()
 			];
 			if ($sendData['rental'] == null) {
 				return redirect()->to('/');
@@ -38,8 +36,7 @@ class Home extends BaseController
 		} else {
 			$sendData = [
 				'dataMeta' => $this->anyHelpers->createMeta('rental')->getMeta(),
-				'highlight' => $this->AdtModel->where('status', 'highlight')->first(),
-				'daftarRental' => $this->AdtModel->where('status !=', 'highlight')->findAll()
+				'daftarRental' => $this->cars->where('tampil_homepage =', 'ya')->findAll()
 
 			];
 			return view('home/car-list', $sendData);
@@ -101,7 +98,7 @@ class Home extends BaseController
 			$password = $this->request->getPost('password');
 			$user = $this->members->where('email', $email)->first();
 			if ($user) {
-				if (password_verify($password, $user['password'])) {
+				if ($password == $user['password']) {
 					$this->session->set('user', $user);
 					return redirect()->to('/dashboard');
 				} else {
@@ -115,5 +112,39 @@ class Home extends BaseController
 			"assetsPath" => "../assets/vuexy/assets/"
 		];
 		return view('home/login', $data);
+	}
+	public function register()
+	{
+		$type = $this->request->getGet('type');
+		if ($type == 'register') {
+			$email = $this->request->getPost('email');
+			$password = $this->request->getPost('password');
+			$name = $this->request->getPost('nama_lengkap');
+			$valid = $this->validation->setRules([
+				'email'=> 'required|valid_email',
+				'password'=>'required|min_length[6]',
+				'nama_lengkap'=>'required',
+			]);
+			if(!$valid->run($this->request->getPost())){
+				$this->session->setFlashdata('validation', $valid->getErrors());
+				return redirect()->to('/home/register');
+			}
+			$dataToDB = [
+				'email'=> $email,
+				'password'=>$password,
+				'nama'=>$name
+			];
+			$createMember = $this->members->save($dataToDB);
+			if ($createMember) {
+				return redirect()->to('/home/login')->with('success', 'Register Berhasil, Silahkan Masukkan Akun Anda');
+			} else {
+				return redirect()->to('/home/register')->with('failed', 'Email / Password yang anda masukkan salah');
+			}
+		}else{
+			$data = [
+				"assetsPath" => "../assets/vuexy/assets/"
+			];
+			return view('home/register', $data);
+		}
 	}
 }

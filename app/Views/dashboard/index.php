@@ -1,6 +1,22 @@
 <?= $this->extend('template/dashboard-template') ?>
 <?= $this->section('content') ?>
 <div class="container-xxl flex-grow-1 container-p-y">
+	<?php if (session()->getFlashdata('success')) : ?>
+		<div class="alert alert-success d-flex align-items-center" role="alert">
+			<span class="alert-icon text-success me-2">
+				<i class="ti ti-check ti-xs"></i>
+			</span>
+			<?= session()->getFlashdata('success'); ?>
+		</div>
+	<?php endif; ?>
+	<?php if (session()->getFlashdata('failed')) : ?>
+		<div class="alert alert-danger d-flex align-items-center" role="alert">
+			<span class="alert-icon text-danger me-2">
+				<i class="ti ti-ban ti-xs"></i>
+			</span>
+			<?= session()->getFlashdata('failed'); ?>
+		</div>
+	<?php endif; ?>
 	<div class="card">
 		<div class="card-header d-flex align-items-center justify-content-between">
 			<h5>Data Sewa Anda</h5>
@@ -40,6 +56,9 @@
 							<td>
 								<a href="<?= base_url() ?>/dashboard/detailSewa/<?= $ds['booking_id'] ?>" class="btn btn-sm btn-primary">
 									Lihat
+								</a>
+								<a href="<?= base_url() ?>/dashboard/generatePdf/<?= $ds['booking_id'] ?>" class="btn btn-sm btn-secondary">
+									Cetak
 								</a>
 							</td>
 						</tr>

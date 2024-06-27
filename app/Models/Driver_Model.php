@@ -6,6 +6,6 @@ use CodeIgniter\Model;
 
 class Driver_Model extends Model
 {
-	protected $table = 'drivers';
-	protected $allowedFields = ['name', 'no_ktp', 'no_sim'];
+	protected $table = 'supir';
+	protected $allowedFields = ['id','name', 'no_ktp', 'no_sim'];
 }

@@ -128,7 +128,7 @@
 		dataAdminTable.DataTable()
 
 		$('#nameUser').on('keyup', (e) => {
-			$('#emailUser').val(e.target.value.toLowerCase().replace(/\s/g, "") + "@kamandaka")
+			$('#emailUser').val(e.target.value.toLowerCase().replace(/\s/g, "") + "@kamandaka.com")
 		})
 
 		$("#modalViewAndEdit").on('show.bs.modal', async (event) => {

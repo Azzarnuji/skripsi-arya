@@ -1,6 +1,22 @@
 <?= $this->extend('template/dashboard-template') ?>
 <?= $this->section('content') ?>
 <div class="container-xxl">
+	<?php if (session()->getFlashdata('success')) : ?>
+		<div class="alert alert-success d-flex align-items-center" role="alert">
+			<span class="alert-icon text-success me-2">
+				<i class="ti ti-check ti-xs"></i>
+			</span>
+			<?= session()->getFlashdata('success'); ?>
+		</div>
+	<?php endif; ?>
+	<?php if (session()->getFlashdata('failed')) : ?>
+		<div class="alert alert-danger d-flex align-items-center" role="alert">
+			<span class="alert-icon text-danger me-2">
+				<i class="ti ti-ban ti-xs"></i>
+			</span>
+			<?= session()->getFlashdata('failed'); ?>
+		</div>
+	<?php endif; ?>
 	<div class="card mt-5">
 		<div class="card-header d-flex align-items-center justify-content-between">
 			<h5>Form Booking</h5>
@@ -60,12 +76,7 @@
 					<input type="text" class="form-control" name="total_harga" id="total_harga" placeholder="RP. 0" readonly="readonly">
 				</div>
 			</div>
-			<div class="row mb-3">
-				<label class="col-sm-3 col-form-label" for="multicol-email">Bukti Bayar</label>
-				<div class="col-sm-9">
-					<input type="file" class="form-control" name="bukti_bayar" id="bukti_bayar">
-				</div>
-			</div>
+			
 			<div class="pt-4">
 				<div class="row justify-content-end">
 					<div class="col-sm-9">

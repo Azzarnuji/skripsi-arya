@@ -21,9 +21,10 @@
 			<!-- / Menu -->
 
 			<!-- Layout container -->
-			<div class="layout-page-" style="padding-left:16.25rem;width:100%;">
+			<div class="layout-page" >
 				<!-- Navbar -->
 
+				<?= $this->include('template/includes/dashboard/navbar') ?>
 
 				<!-- / Navbar -->
 

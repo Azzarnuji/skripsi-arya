@@ -27,6 +27,7 @@
 				<thead>
 					<tr class="text-nowrap">
 						<th>No</th>
+						<th>Id Mobil</th>
 						<th>Merk Mobil</th>
 						<th>Pabrikan Mobil</th>
 						<th>Nomor Plat</th>
@@ -43,6 +44,7 @@
 					<?php foreach ($cars as $car) : ?>
 						<tr>
 							<th scope="row"><?= $i++ ?></th>
+							<td><?= $car['idMobil'] ?></td>
 							<td><?= $car['merk'] ?></td>
 							<td><?= $car['pabrikan'] ?></td>
 							<td><?= $car['nomor_plat'] ?></td>
@@ -164,6 +166,23 @@
 							<div class="col-md-12 mb-3">
 								<label for="formFile" class="form-label">Foto Kendaraan</label>
 								<input class="form-control" name="image" type="file" id="formFile" required>
+							</div>
+							<div class="row mb-3">
+								<label class="col-sm-3 col-form-label" for="multicol-email">Tampil Di Homepage</label>
+								<div class="col-sm-9">
+									<div class="form-check mt-3">
+										<input name="tampil_homepage" class="form-check-input" type="radio" value="ya" id="defaultRadio1">
+										<label class="form-check-label" for="defaultRadio1">
+											Ya
+										</label>
+									</div>
+									<div class="form-check">
+										<input name="tampil_homepage" class="form-check-input" type="radio" value="tidak" id="defaultRadio2">
+										<label class="form-check-label" for="defaultRadio2">
+											Tidak
+										</label>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

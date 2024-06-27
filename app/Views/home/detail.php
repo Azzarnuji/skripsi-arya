@@ -53,7 +53,7 @@ $textEncode = urlencode($text);
 			</ul>
 		</div>
 		<div class="col-12 d-flex justify-content-center" style="margin-top: 20px;">
-			<a href="<?= base_url("/booking/" . $rental['idMobil']); ?>" class="btn btn-primary">Booking Sekarang</a>
+			<a href="<?= base_url("/home/login"); ?>" class="btn btn-primary">Booking Sekarang</a>
 		</div>
 	</div>
 	<hr>

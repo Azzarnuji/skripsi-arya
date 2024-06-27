@@ -34,6 +34,12 @@
 						<div data-i18n="Data Sewa Anda">Data Sewa Anda</div>
 					</a>
 				</li>
+				<li class="menu-item">
+					<a href="<?= base_url('/logout') ?>" class="menu-link">
+						<div data-i18n="Logout">Logout</div>
+					</a>
+				</li>
+			</ul>
 		</li>
 	</ul>
 	</li>

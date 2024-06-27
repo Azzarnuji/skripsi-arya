@@ -28,7 +28,7 @@ class Admin extends BaseController
 		$image = $this->request->getFile('image');
 		$randomFilename = $image->getRandomName();
 		$data = [
-			'idMobil' =>  strtolower($this->request->getPost('merk') . "-" . random_string("alpha", 5)),
+			'idMobil' =>  "C-".rand(1000, 9999),
 			"merk" => $this->request->getPost('merk'),
 			"pabrikan" => $this->request->getPost('pabrikan'),
 			"tahun" => intval($this->request->getPost('tahun')),
@@ -41,15 +41,16 @@ class Admin extends BaseController
 			"kapasitas_mesin" => $this->request->getPost('kapasitas_mesin'),
 			"tipe_bbm" => $this->request->getPost('tipe_bbm'),
 			"img" => $randomFilename,
-			"status" => "non"
+			"tampil_homepage" => $this->request->getPost('tampil_homepage'),
 		];
+		// dd($data);
 		try {
 			$this->cars->insert($data);
 			$image->move(ROOTPATH . 'assets/images/car/', $randomFilename);
-			return redirect()->to('/admin')->with('success', 'Data kendaraan berhasil ditambahkan');
+			return redirect()->to('/admin/dataKendaraan')->with('success', 'Data kendaraan berhasil ditambahkan');
 		} catch (Exception $e) {
 			dd($e);
-			return redirect()->to('/admin')->with('failed', 'Data kendaraan gagal ditambahkan');
+			return redirect()->to('/admin/dataKendaraan')->with('failed', 'Data kendaraan gagal ditambahkan');
 		}
 	}
 
@@ -103,9 +104,9 @@ class Admin extends BaseController
 		try {
 			unlink(ROOTPATH . 'assets/images/car/' . $this->cars->where('idMobil', $id)->first()['img']);
 			$this->cars->where('idMobil', $id)->delete();
-			return redirect()->to('/admin')->with('success', 'Data kendaraan berhasil dihapus');
+			return redirect()->to('/admin/dataKendaraan')->with('success', 'Data kendaraan berhasil dihapus');
 		} catch (Exception $e) {
-			return redirect()->to('/admin')->with('failed', 'Data kendaraan gagal dihapus');
+			return redirect()->to('/admin/dataKendaraan')->with('failed', 'Data kendaraan gagal dihapus');
 		}
 	}
 	public function detailKendaraan($id)
@@ -135,7 +136,7 @@ class Admin extends BaseController
 					$this->users->insert([
 						'email' => $emailUser,
 						'name' => $nameUser,
-						'password' => password_hash("kamandaka123", PASSWORD_BCRYPT)
+						'password' => "kamandaka123"
 					]);
 					return redirect()->to('/admin/dataAdmin/?type=view')->with('success', 'Data Admin berhasil ditambahkan');
 				} catch (\Exception $e) {
@@ -225,6 +226,7 @@ class Admin extends BaseController
 
 				try {
 					$this->drivers->insert([
+						'id'=> random_string('alpha', 10),
 						'name' => $nameSupir,
 						'no_ktp' => $noKtp,
 						'no_sim' => $noSim,
@@ -288,9 +290,9 @@ class Admin extends BaseController
 
 	public function dataBooking()
 	{
-		$query = $this->members->join('bookings', 'bookings.email = members.email')
-			->join('payments', 'payments.booking_id = bookings.booking_id')
-			->join('rental', 'rental.idMobil = bookings.idMobil')->get()->getResultArray();
+		$query = $this->members->join('penyewaan', 'penyewaan.email = penyewa.email')
+			->join('pembayaran', 'pembayaran.booking_id = penyewaan.booking_id')
+			->join('mobil', 'mobil.idMobil = penyewaan.idMobil')->get()->getResultArray();
 		$data = [
 			'dataSewa' => $query,
 			"assetsPath" => "../assets/vuexy/assets/"
@@ -303,9 +305,9 @@ class Admin extends BaseController
 	{
 		$request = \Config\Services::request();
 		$lastSegment = $request->uri->getSegment($request->uri->getTotalSegments());
-		$query = $this->members->join('bookings', 'bookings.email = members.email')
-			->join('payments', 'payments.booking_id = bookings.booking_id')
-			->join('rental', 'rental.idMobil = bookings.idMobil')->where('bookings.booking_id', $lastSegment)->first();
+		$query = $this->members->join('penyewaan', 'penyewaan.email = penyewa.email')
+			->join('pembayaran', 'pembayaran.booking_id = penyewaan.booking_id')
+			->join('mobil', 'mobil.idMobil = penyewaan.idMobil')->where('penyewaan.booking_id', $lastSegment)->first();
 		$data = [
 			'dataSewa' => $query,
 			"assetsPath" => "../../assets/vuexy/assets/"
@@ -320,7 +322,7 @@ class Admin extends BaseController
 		$idBooking = $this->request->getPost('idBooking');
 		$statusPayment = $this->request->getPost('update_status');
 		try {
-			$this->payments->where('payment_id', $idPayment)->set(['status_payment' => $statusPayment])->update();
+			$this->payments->where('payment_id', $idPayment)->set(['status_payment' => $statusPayment, 'updated_at' => date('Y-m-d H:i:s')])->update();
 			return redirect()->to('admin/detailBooking/' . $idBooking)->with('success', 'Update Booking Berhasil');
 		} catch (\Exception $e) {
 			return redirect()->to('admin/detailBooking/' . $idBooking)->with('failed', 'Update Booking Gagal');
@@ -335,7 +337,7 @@ class Admin extends BaseController
 		$query = $this->users->where('email', $this->request->getPost('email'))->first();
 		$password = $this->request->getPost('password');
 		if ($query != null) {
-			if (password_verify($password, $query['password'])) {
+			if ($password == $query['password']) {
 				return redirect()->to("admin/dataKendaraan");
 			} else {
 				return redirect()->to('/admin')->with('failed', 'Username / Password Salah');
