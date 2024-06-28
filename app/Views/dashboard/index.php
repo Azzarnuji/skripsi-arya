@@ -57,9 +57,11 @@
 								<a href="<?= base_url() ?>/dashboard/detailSewa/<?= $ds['booking_id'] ?>" class="btn btn-sm btn-primary">
 									Lihat
 								</a>
-								<a href="<?= base_url() ?>/dashboard/generatePdf/<?= $ds['booking_id'] ?>" class="btn btn-sm btn-secondary">
-									Cetak
-								</a>
+								<?php if($ds['status_payment'] == 2) : ?>
+									<a href="<?= base_url() ?>/dashboard/generatePdf/<?= $ds['booking_id'] ?>" target="_blank" class="btn btn-sm btn-secondary">
+										Cetak
+									</a>
+								<?php endif; ?>
 							</td>
 						</tr>
 					<?php endforeach; ?>
