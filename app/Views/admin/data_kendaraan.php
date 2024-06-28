@@ -153,11 +153,11 @@
 							</div>
 							<div class="col-md-12 mb-3">
 								<label for="nameWithTitle" class="form-label">Harga Lepas Kunci</label>
-								<input type="text" name="hargaOne" class="form-control" placeholder="Enter Name" required>
+								<input type="text" name="hargaTwo" class="form-control" placeholder="Enter Name" required>
 							</div>
 							<div class="col-md-12 mb-3">
 								<label for="nameWithTitle" class="form-label">Harga All IN</label>
-								<input type="text" name="hargaTwo" class="form-control" placeholder="Enter Name" required>
+								<input type="text" name="hargaOne" class="form-control" placeholder="Enter Name" required>
 							</div>
 							<div class="col-md-12 mb-3">
 								<label for="nameWithTitle" class="form-label">Deskripsi Kendaraan</label>
