@@ -76,7 +76,7 @@
 						<div class="row">
 							<label class="col-sm-3 col-form-label text-sm-start" for="collapsible-city">Harga Lepas Kunci</label>
 							<div class="col-sm-9">
-								<input type="text" id="collapsible-city" class="form-control" placeholder="Jackson" value="<?= $car['hargaOne']; ?>" name="hargaOne">
+								<input type="text" id="collapsible-city" class="form-control" placeholder="Jackson" value="<?= $car['hargaTwo']; ?>" name="hargaTwo">
 							</div>
 						</div>
 					</div>
@@ -84,7 +84,7 @@
 						<div class="row">
 							<label class="col-sm-3 col-form-label text-sm-start" for="collapsible-city">Harga All In</label>
 							<div class="col-sm-9">
-								<input type="text" id="collapsible-city" class="form-control" placeholder="Jackson" value="<?= $car['hargaTwo']; ?>" name="hargaTwo">
+								<input type="text" id="collapsible-city" class="form-control" placeholder="Jackson" value="<?= $car['hargaOne']; ?>" name="hargaOne">
 							</div>
 						</div>
 					</div>
