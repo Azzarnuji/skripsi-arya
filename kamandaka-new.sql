@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3308
--- Generation Time: Jun 28, 2024 at 12:00 AM
+-- Generation Time: Jun 28, 2024 at 12:05 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -32,6 +32,14 @@ CREATE TABLE `admin` (
   `password` varchar(255) NOT NULL,
   `name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`email`, `password`, `name`) VALUES
+('mfachrezy@kamandaka.com', 'kamandaka123', 'M Fachrezy'),
+('superadmin@kamandaka.com', 'kamandaka123', 'Super Admin');
 
 -- --------------------------------------------------------
 
