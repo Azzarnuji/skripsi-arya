@@ -330,6 +330,74 @@ class Admin extends BaseController
 		}
 	}
 
+	public function cetakKendaraan()
+	{
+		$data = [
+			"cars" => $this->cars->findAll(),
+			"assetsPath" => "../assets/vuexy/assets/"
+		];
+		$domPdf = new \Dompdf\Dompdf();
+		$domPdf->loadHtml(view('admin/pdf/pdf_kendaraan', $data));
+		$domPdf->setPaper('A4', 'potrait');
+		$domPdf->render();
+		$domPdf->stream("Cetak-Kendaraan-".date('Y-m-d-H:i:s').".pdf");
+		// return view('admin/pdf/pdf_kendaraan', $data);
+	}
+	public function cetakBooking()
+	{
+		$query = $this->members->join('penyewaan', 'penyewaan.email = penyewa.email')
+			->join('pembayaran', 'pembayaran.booking_id = penyewaan.booking_id')
+			->join('mobil', 'mobil.idMobil = penyewaan.idMobil')->get()->getResultArray();
+		$data = [
+			'dataSewa' => $query,
+			"assetsPath" => "../assets/vuexy/assets/"
+		];
+		$domPdf = new \Dompdf\Dompdf();
+		$domPdf->loadHtml(view('admin/pdf/pdf_booking', $data));
+		$domPdf->setPaper('A4', 'potrait');
+		$domPdf->render();
+		$domPdf->stream("Cetak-Booking-".date('Y-m-d-H:i:s').".pdf");
+		// return view('admin/pdf/pdf_kendaraan', $data);
+	}
+	public function cetakAdmin()
+	{
+		$data = [
+			"users" => $this->users->findAll(),
+			"assetsPath" => "../assets/vuexy/assets/"
+		];
+		$domPdf = new \Dompdf\Dompdf();
+		$domPdf->loadHtml(view('admin/pdf/pdf_admin', $data));
+		$domPdf->setPaper('A4', 'potrait');
+		$domPdf->render();
+		$domPdf->stream("Cetak-Admin-".date('Y-m-d-H:i:s').".pdf");
+		// return view('admin/pdf/pdf_kendaraan', $data);
+	}
+	public function cetakMembers()
+	{
+		$data = [
+			"members" => $this->members->findAll(),
+			"assetsPath" => "../assets/vuexy/assets/"
+		];
+		$domPdf = new \Dompdf\Dompdf();
+		$domPdf->loadHtml(view('admin/pdf/pdf_member', $data));
+		$domPdf->setPaper('A4', 'potrait');
+		$domPdf->render();
+		$domPdf->stream("Cetak-Members-".date('Y-m-d-H:i:s').".pdf");
+		// return view('admin/pdf/pdf_kendaraan', $data);
+	}
+	public function cetakSupir()
+	{
+		$data = [
+			"users" => $this->drivers->findAll(),
+			"assetsPath" => "../assets/vuexy/assets/"
+		];
+		$domPdf = new \Dompdf\Dompdf();
+		$domPdf->loadHtml(view('admin/pdf/pdf_supir', $data));
+		$domPdf->setPaper('A4', 'potrait');
+		$domPdf->render();
+		$domPdf->stream("Cetak-Supir-".date('Y-m-d-H:i:s').".pdf");
+		// return view('admin/pdf/pdf_kendaraan', $data);
+	}
 
 	public function login()
 	{

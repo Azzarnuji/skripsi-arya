@@ -20,7 +20,10 @@
 	<div class="card">
 		<div class="card-header d-flex align-items-center justify-content-between">
 			<h5>Data Supir</h5>
-			<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAddSupir">Tambah Supir</button>
+			<div class="d-flex flex-column gap-2">
+				<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAddSupir">Tambah Supir</button>
+				<a href="<?= base_url('admin/cetakSupir') ?>" class="btn btn-success"><i class="ti ti-printer me-2"></i> Cetak</a>
+			</div>
 		</div>
 		<div class="card-datatable table-responsive pt-0">
 			<table class="datatables-basic table" id="dataSupir">

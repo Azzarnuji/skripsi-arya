@@ -19,8 +19,8 @@
 	<?php endif; ?>
 	<div class="card">
 		<div class="card-header d-flex align-items-center justify-content-between">
-			<h5>Data Supir</h5>
-			<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAddSupir">Tambah Supir</button>
+			<h5>Data Penyewa</h5>
+			<a href="<?= base_url('admin/cetakMembers') ?>" class="btn btn-success"><i class="ti ti-printer me-2"></i> Cetak</a>
 		</div>
 		<div class="card-datatable table-responsive pt-0">
 			<table class="datatables-basic table" id="dataSupir">

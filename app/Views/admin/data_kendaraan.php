@@ -20,7 +20,10 @@
 	<div class="card">
 		<div class="card-header d-flex align-items-center justify-content-between">
 			<h5>Data Kendaraan</h5>
-			<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTambahKendaraan">Tambah Kendaraan</button>
+			<div class="d-flex flex-column gap-2">
+				<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTambahKendaraan">Tambah Kendaraan</button>
+				<a href="<?= base_url('admin/cetakKendaraan') ?>" class="btn btn-success"><i class="ti ti-printer me-2"></i> Cetak</a>
+			</div>
 		</div>
 		<div class="card-datatable table-responsive text-nowrap">
 			<table class="datatables-basic table" id="carTable">
@@ -49,8 +52,8 @@
 							<td><?= $car['pabrikan'] ?></td>
 							<td><?= $car['nomor_plat'] ?></td>
 							<td><?= $car['tahun'] ?? '-' ?></td>
-							<td><?= $car['hargaOne'] ?></td>
 							<td><?= $car['hargaTwo'] ?></td>
+							<td><?= $car['hargaOne'] ?></td>
 							<td><?= limitWords($car['description'], 20) ?>...</td>
 							<td>
 								<a href="<?= base_url() . "/assets/images/car/" .  $car['img'] ?>" target="_blank"><?= $car['img']; ?></a>

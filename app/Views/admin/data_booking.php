@@ -4,6 +4,7 @@
 	<div class="card">
 		<div class="card-header d-flex align-items-center justify-content-between">
 			<h5>List Data Sewa</h5>
+			<a href="<?= base_url('admin/cetakBooking') ?>" class="btn btn-success"><i class="ti ti-printer me-2"></i> Cetak</a>
 		</div>
 		<div class="card-datatable table-responsive text-nowrap">
 			<table class="datatables-basic table" id="sewaTable">

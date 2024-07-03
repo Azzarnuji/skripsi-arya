@@ -36,7 +36,7 @@
 				</li>
 				<li class="menu-item">
 					<a href="<?= base_url('admin/dataBooking') ?>" class="menu-link">
-						<div data-i18n="Data Booking">Data Booking</div>
+						<div data-i18n="Data Sewa">Data Sewa</div>
 					</a>
 				</li>
 				<li class="menu-item">
@@ -51,7 +51,7 @@
 				</li>
 				<li class="menu-item">
 					<a href="<?= base_url('admin/members') ?>" class="menu-link">
-						<div data-i18n="Members">Members</div>
+						<div data-i18n="Penyewa">Penyewa</div>
 					</a>
 				</li>
 			</ul>
