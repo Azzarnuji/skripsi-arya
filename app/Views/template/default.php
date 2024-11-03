@@ -188,6 +188,10 @@
 						<a href="javascript:void(0)" class="navbar-link" data-nav-link onclick="updatePage('#contact-we')" id="contact-we-link">Kontak Kami</a>
 					</li>
 
+					<li>
+						<a href="/blog" class="navbar-link" data-nav-link id="contact-we-link">Blog</a>
+					</li>
+
 				</ul>
 			</nav>
 
