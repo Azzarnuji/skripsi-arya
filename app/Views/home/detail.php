@@ -3,7 +3,7 @@
 <?php
 $text = "Halo Admin  Kamandaka Premium Car" . PHP_EOL .
 	"Merk : " . strtoupper($rental['pabrikan']) . PHP_EOL .
-	"Unit : " . strtoupper($id . " " . $rental['tahun']) . PHP_EOL .
+	"Unit : " . strtoupper($rental['merk'] . " " . $rental['tahun']) . PHP_EOL .
 	"Apakah Ready?";
 $textEncode = urlencode($text);
 ?>
