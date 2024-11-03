@@ -53,7 +53,7 @@ $textEncode = urlencode($text);
 			</ul>
 		</div>
 		<div class="col-12 d-flex justify-content-center" style="margin-top: 20px;">
-			<a href="<?= base_url("/home/login"); ?>" class="btn btn-primary">Booking Sekarang</a>
+			<a href="https://api.whatsapp.com/send?phone=62811905053&text=<?= $textEncode ?>" class="btn btn-primary">Booking Sekarang</a>
 		</div>
 	</div>
 	<hr>

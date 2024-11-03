@@ -39,6 +39,27 @@ function getStatusPayment(int $status)
 	return $data[$status];
 }
 
+if(!function_exists('generateSlug')){
+	function generateSlug($string) {
+		// Ubah huruf menjadi huruf kecil
+		$slug = strtolower($string);
+	
+		// Ganti karakter khusus dengan spasi
+		$slug = preg_replace('/[^a-z0-9\s-]/', '', $slug);
+	
+		// Ganti beberapa spasi atau tanda hubung dengan satu tanda hubung
+		$slug = preg_replace('/[\s-]+/', ' ', $slug);
+	
+		// Ganti spasi dengan tanda hubung
+		$slug = preg_replace('/\s/', '-', $slug);
+	
+		// Hilangkan tanda hubung di awal dan akhir string
+		$slug = trim($slug, '-')."-".rand(1000, 9999);
+	
+		return $slug;
+	}
+}
+
 if(! function_exists('getErrorValidation')){
 
 	function getErrorValidation($sessionName,$fieldName)

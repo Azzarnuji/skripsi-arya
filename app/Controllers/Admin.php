@@ -28,7 +28,7 @@ class Admin extends BaseController
 		$image = $this->request->getFile('image');
 		$randomFilename = $image->getRandomName();
 		$data = [
-			'idMobil' =>  "C-".rand(1000, 9999),
+			'idMobil' =>  generateSlug("sewa-mobil-" . $this->request->getPost('merk')),
 			"merk" => $this->request->getPost('merk'),
 			"pabrikan" => $this->request->getPost('pabrikan'),
 			"tahun" => intval($this->request->getPost('tahun')),
