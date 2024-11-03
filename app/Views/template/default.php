@@ -71,6 +71,10 @@
 	<link rel="stylesheet" href="<?= base_url('/assets/css/styletwo.css'); ?>">
 	<link rel="stylesheet" href="<?= base_url('/assets/css/bootstrap-grid.css'); ?>">
 	<link rel="preload" as="script" href="<?= base_url('/assets/js/scripttwo.js'); ?>">
+	<link rel="stylesheet" id="wp-block-navigation-css" href="https://kamandakapremiumcar.com/blog/wp-includes/blocks/navigation/style.min.css?ver=6.6.2" media="all">
+	<link rel="stylesheet" id="wp-block-social-links-css" href="https://kamandakapremiumcar.com/blog/wp-includes/blocks/social-links/style.min.css?ver=6.6.2" media="all">
+	<link rel="stylesheet" id="the-minimal-blogger-patterns-css" href="https://kamandakapremiumcar.com/blog/wp-content/themes/the-minimal-blogger/assets/css/patterns.css?ver=1730634255" media="all">
+	<link rel="stylesheet" id="minimalistix-patterns-css" href="https://kamandakapremiumcar.com/blog/wp-content/themes/minimalistix/assets/css/patterns.css?ver=1730634255" media="all">
 
 
 	<link rel="preload" as="script" href="<?= base_url('/assets/js/owl.carousel.min.js'); ?>">
