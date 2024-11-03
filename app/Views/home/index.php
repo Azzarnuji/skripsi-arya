@@ -208,7 +208,7 @@
 <!-- 
         - #FEATURED CAR
       -->
-<div class="container" id="about-we">
+<div class="container" id="about-us">
 	<h2 class="h2 section-title">Tentang Kami</h2>
 	<div class="hero-contact">
 		<div class="row">
@@ -228,7 +228,7 @@
 		</div>
 	</div>
 </div>
-<div class="container" id="contact-we">
+<div class="container" id="contact-us">
 	<h2 class="h2 section-title">Kontak Kami</h2>
 	<div class="hero-contactwe">
 		<div class="row">
@@ -256,7 +256,6 @@
 				<br>
 				<p><a href="https://api.whatsapp.com/send?phone=628111895053&text=Halo Admin Kamandaka Premium Car%0D%0ASaya Mau Infomasi Rental Mobil" class="a-href-contact">+628111895053</a></p>
 				<br>
-				<p><a href="https://api.whatsapp.com/send?phone=6285883260823&text=Halo Admin Kamandaka Premium Car%0D%0ASaya Mau Infomasi Rental Mobil" class="a-href-contact">+6285883260823</a></p>
 			</div>
 		</div>
 	</div>
