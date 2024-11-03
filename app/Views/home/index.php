@@ -90,7 +90,6 @@
 				<br>
 				<p><a href="https://api.whatsapp.com/send?phone=628111895053&text=Halo Admin Kamandaka Premium Car%0D%0ASaya Mau Infomasi Rental Mobil" class="a-href">+628111895053</a></p>
 				<br>
-				<p><a href="https://api.whatsapp.com/send?phone=6285883260823&text=Halo Admin Kamandaka Premium Car%0D%0ASaya Mau Infomasi Rental Mobil" class="a-href">+6285883260823</a></p>
 			</div>
 		</div>
 	</div>
