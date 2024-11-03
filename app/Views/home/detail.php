@@ -67,7 +67,7 @@ $textEncode = urlencode($text);
 
 		</div>
 		<div class="col-12 d-flex justify-content-start" style="margin-bottom: 20px;">
-		<?= str_replace("\n", "<br>", $rental['description']); ?>
+		<?= nl2br($rental['description']); ?>
 
 			
 		</div>
