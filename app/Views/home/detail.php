@@ -43,9 +43,9 @@ $textEncode = urlencode($text);
 						<div class="card-content">
 							Terms and Conditions
 							<div class="card-price-wrapper">
-								<p> - ALL IN : Unit, Driver, BBM, Tol, Parkir (No Valet)<br>
+								<p>
 									- All prices are exclude PPN 10%<br>
-									- Dalkot : Dalam Kota </p>
+									</p>
 							</div>
 						</div>
 					</div>

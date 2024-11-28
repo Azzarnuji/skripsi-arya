@@ -29,7 +29,7 @@
 							<div class="card-price-wrapper">
 
 								<p class="card-price">
-									<strong><?= $dr['hargaOne']; ?></strong> / Day - ALL In
+									<strong><?= $dr['hargaTwo']; ?></strong> / Day
 								</p>
 
 								<button class="btn fav-btn" aria-label="Add to favourite list">
