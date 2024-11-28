@@ -29,9 +29,8 @@ $textEncode = urlencode($text);
 							Harga
 							<div class="card-price-wrapper">
 								<p class="card-price">
-									<strong>ALL IN : <?= $rental['hargaOne']; ?></strong>
 									<br>
-									<strong>Lepas Kunci : <?= $rental['hargaTwo']; ?></strong>
+									<strong>Harga : <?= $rental['hargaTwo']; ?></strong>
 								</p>
 
 							</div>
