@@ -7,6 +7,15 @@ $text = "Halo Admin  Kamandaka Premium Car" . PHP_EOL .
 	"Apakah Ready?";
 $textEncode = urlencode($text);
 ?>
+<style>
+  /* Remove background color from Quill editor */
+  .ql-container {
+    background-color: transparent !important; /* Remove background */
+  }
+  .ql-editor {
+    background-color: transparent !important; /* Remove background */
+  }
+</style>
 <div class="container">
 	<div class="row" style="margin-bottom: 20px;">
 		<div class="col-12 d-flex justify-content-center">
@@ -108,7 +117,8 @@ $textEncode = urlencode($text);
 			theme: 'snow',
 			modules:{
 				toolbar: false
-			}
+			},
+			readOnly: true 
 		});
 	})
 </script>
