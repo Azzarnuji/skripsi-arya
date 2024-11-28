@@ -121,6 +121,7 @@ $textEncode = urlencode($text);
 			},
 			readOnly: true 
 		});
+		quill.format('size', 'medium');
 	})
 </script>
 
