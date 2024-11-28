@@ -65,7 +65,9 @@ $textEncode = urlencode($text);
 			<h2>Rental Mobil <?= $rental['merk']; ?> Murah</h2>
 
 		</div>
-		<?= $rental['description']; ?>
+		<div id="editor">
+			<?= $rental['description']; ?>
+		</div>
 		<!-- <div class="col-12 d-flex justify-content-start" style="margin-bottom: 20px;">
 		</div> -->
 	</div>
@@ -100,7 +102,16 @@ $textEncode = urlencode($text);
 	</div>
 </div>
 
-
+<script>
+	$(document).ready(()=>{
+		var quill = new Quill('#editor', {
+			theme: 'snow',
+			modules:{
+				toolbar: false
+			}
+		});
+	})
+</script>
 
 
 
