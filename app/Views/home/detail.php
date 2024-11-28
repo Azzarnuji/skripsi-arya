@@ -75,9 +75,9 @@ $textEncode = urlencode($text);
 
 		</div>
 		<?= $rental['description']; ?>
-		<div id="editor">
+		<!-- <div id="editor">
 			<?= $rental['description']; ?>
-		</div>
+		</div> -->
 		<!-- <div class="col-12 d-flex justify-content-start" style="margin-bottom: 20px;">
 		</div> -->
 	</div>
@@ -114,14 +114,14 @@ $textEncode = urlencode($text);
 
 <script>
 	$(document).ready(()=>{
-		var quill = new Quill('#editor', {
-			theme: 'snow',
-			modules:{
-				toolbar: false
-			},
-			readOnly: true 
-		});
-		quill.format('size', 'medium');
+		// var quill = new Quill('#editor', {
+		// 	theme: 'snow',
+		// 	modules:{
+		// 		toolbar: false
+		// 	},
+		// 	readOnly: true 
+		// });
+		// quill.format('size', 'medium');
 	})
 </script>
 
