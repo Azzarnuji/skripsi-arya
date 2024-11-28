@@ -74,6 +74,7 @@ $textEncode = urlencode($text);
 			<h2>Rental Mobil <?= $rental['merk']; ?> Murah</h2>
 
 		</div>
+		<?= $rental['description']; ?>
 		<div id="editor">
 			<?= $rental['description']; ?>
 		</div>
