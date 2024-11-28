@@ -164,7 +164,8 @@
 							</div>
 							<div class="col-md-12 mb-3">
 								<label for="nameWithTitle" class="form-label">Deskripsi Kendaraan</label>
-								<textarea name="deskripsi" id="deskripsi" class="form-control" required></textarea>
+								<div id="editor"></div>
+								<input name="deskripsi" id="deskripsi" class="form-control" type="hidden" required />
 							</div>
 							<div class="col-md-12 mb-3">
 								<label for="formFile" class="form-label">Foto Kendaraan</label>
@@ -202,6 +203,13 @@
 <script>
 	$(document).ready(() => {
 		$('#carTable').DataTable()
+		var quill = new Quill('#editor', {
+			theme: 'snow'
+		});
+		document.querySelector('form').addEventListener('submit', function(event) {
+			var content = quill.root.innerHTML;  // Get HTML content from Quill editor
+			document.getElementById('deskripsi').value = content;  // Set the value of the hidden input
+		});
 	})
 </script>
 <?= $this->endSection() ?>
