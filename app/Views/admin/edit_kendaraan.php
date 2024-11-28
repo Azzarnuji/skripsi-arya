@@ -119,9 +119,10 @@
 						<div class="row">
 							<label class="col-sm-12 col-form-label text-sm-start">Deskripsi Kendaraan</label>
 							<div class="col-sm-12">
-								<textarea name="deskripsi" class="form-control" rows="4" placeholder="1456, Mall Road">
-									<?= htmlspecialchars($car['description']); ?>
-								</textarea>
+								<div id="editor">
+									<?= $car['description']; ?>
+								</div>
+								<input name="deskripsi" id="deskripsi" class="form-control" type="hidden" required />
 							</div>
 						</div>
 					</div>
@@ -133,6 +134,16 @@
 			</form>
 		</div>
 	</div>
-
 </div>
+<script>
+	$(document).ready(() => {
+		var quill = new Quill('#editor', {
+			theme: 'snow'
+		});
+		document.querySelector('form').addEventListener('submit', function(event) {
+			var content = quill.root.innerHTML;  // Get HTML content from Quill editor
+			document.getElementById('deskripsi').value = content;  // Set the value of the hidden input
+		});
+	})
+</script>
 <?= $this->endSection() ?>
