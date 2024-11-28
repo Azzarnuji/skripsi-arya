@@ -66,9 +66,7 @@ $textEncode = urlencode($text);
 
 		</div>
 		<div class="col-12 d-flex justify-content-start" style="margin-bottom: 20px;">
-			<div>
-				<?= $rental['description']; ?>
-			</div>
+			<?= $rental['description']; ?>
 		</div>
 	</div>
 	<div class="modal fade" id="modalBooking" tabindex="-1" style="display: none;" aria-hidden="true">

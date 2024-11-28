@@ -64,6 +64,7 @@
 	<link rel="preload" as="style" href="<?= base_url('/assets/css/owl.carousel.min.css'); ?>">
 	<link rel="preload" as="style" href="<?= base_url('/assets/css/owl.theme.default.min.css'); ?>">
 	<link rel="preload" as="style" href="<?= base_url('/assets/css/styletwo.css'); ?>">
+	<link rel="stylesheet" href="<?= base_url('assets/vuexy/assets/lib/quill/quill.snow.css') ?>">
 
 
 	<link rel="stylesheet" href="<?= base_url('/assets/css/owl.carousel.min.css'); ?>">
