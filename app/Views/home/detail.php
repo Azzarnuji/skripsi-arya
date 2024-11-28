@@ -65,9 +65,9 @@ $textEncode = urlencode($text);
 			<h2>Rental Mobil <?= $rental['merk']; ?> Murah</h2>
 
 		</div>
-		<div class="col-12 d-flex justify-content-start" style="margin-bottom: 20px;">
-			<?= $rental['description']; ?>
-		</div>
+		<?= $rental['description']; ?>
+		<!-- <div class="col-12 d-flex justify-content-start" style="margin-bottom: 20px;">
+		</div> -->
 	</div>
 	<div class="modal fade" id="modalBooking" tabindex="-1" style="display: none;" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
