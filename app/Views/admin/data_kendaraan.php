@@ -1,5 +1,14 @@
 <?= $this->extend('template/admin-template', ['assetsPath' => $assetsPath]) ?>
 <?= $this->section('content') ?>
+<style>
+  /* Remove background color from Quill editor */
+  .ql-container {
+    background-color: transparent !important; /* Remove background */
+  }
+  .ql-editor {
+    background-color: transparent !important; /* Remove background */
+  }
+</style>
 <div class="container-xxl flex-grow-1 container-p-y">
 	<?php if (session()->getFlashdata('success')) : ?>
 		<div class="alert alert-success d-flex align-items-center" role="alert">
